@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Suite name="Parallel test suite" parallel="Classes" thread-count="2">
-<test name="Test 1">
-<classes>
-<class name="testngsamples.TestParallelClassOne"/>
-<classn name="testngsamples.TestParallelClassTwo"/>
-</classes>
-</test>
-</Suite>
