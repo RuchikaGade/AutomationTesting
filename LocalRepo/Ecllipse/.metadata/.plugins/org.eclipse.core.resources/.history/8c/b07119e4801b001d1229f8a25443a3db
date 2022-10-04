@@ -1,0 +1,12 @@
+package program;
+
+public class MockAssignment14thAugust {
+
+	public static void main(String[] args) {
+		String str="Ruchia Gade";
+		String a[]=str.slpit(" ");
+		for (int i=0,i,a.length(),i++) {
+
+	}
+
+}

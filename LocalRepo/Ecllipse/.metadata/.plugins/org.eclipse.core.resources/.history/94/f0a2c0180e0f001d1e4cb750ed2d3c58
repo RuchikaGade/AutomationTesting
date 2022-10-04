@@ -1,0 +1,42 @@
+package collection;
+import java.util.ArrayList;
+public class Arraylist2 {
+	public static void main(String[] args) {
+		ArrayList a1=new ArrayList();
+		System.out.println("Initial list of elements:"+a1);
+		System.out.println("list of element status:"+a1.isEmpty());
+		a1.add("Ravi");
+		a1.add("vijay");
+		a1.add("ajay");
+		System.out.println("After invoking add(E e)method:"+a1);
+		a1.add(1,"Gaurav");
+		System.out.println("After adding new element:"+a1);
+		ArrayList a2=new ArrayList();
+		a2.add("Hanumant");
+		a2.add("sonu");
+		System.out.println("Displaying list of object2:"+a2);
+		a1.addAll(a2);
+		System.out.println("list of element after adding element:"+a1);
+		ArrayList a3=new ArrayList();
+		a3.add("joan");
+		a3.add("Rahul");
+		System.out.println("elements of object a3:"+a3);
+		// Adding second list to first list
+		a1.addAll(a3);
+		System.out.println("elements of object a1 after adding a3:"+a1);
+		ArrayList a4=new ArrayList();
+		a4.add("Ruchi");
+		a4.add("Piu");
+		a4.add("Kushal");
+		a1.addAll(a4);
+		System.out.println("Getting a1 after ading a4:"+a1);
+		System.out.println("et index no 7:"+a1.get(7));
+		a1.set(7, "choti");
+		System.out.println("getting element by setting value:"+a1);
+		System.out.println("get value by index:"+a1.get(9));
+		a1.set(11,"Domuuuu");
+		System.out.println(a1);
+		
+}
+
+}

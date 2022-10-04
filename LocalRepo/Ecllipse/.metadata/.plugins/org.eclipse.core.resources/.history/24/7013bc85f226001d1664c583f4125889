@@ -1,0 +1,15 @@
+package ExplicitWait;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+import org .openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium
+
+public class FluentWait {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

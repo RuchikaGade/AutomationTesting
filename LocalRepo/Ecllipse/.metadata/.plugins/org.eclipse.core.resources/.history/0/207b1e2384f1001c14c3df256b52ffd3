@@ -1,0 +1,13 @@
+package program;
+
+public class WhileLoop3 {
+
+	public static void main(String[] args) {
+		int a=1, times=10;
+		while(a<10) {
+			System.out.println("java while loop:"+a);
+		}
+
+	}
+
+}

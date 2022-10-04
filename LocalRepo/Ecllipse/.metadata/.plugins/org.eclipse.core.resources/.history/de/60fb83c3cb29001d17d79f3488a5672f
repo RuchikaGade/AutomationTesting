@@ -1,0 +1,33 @@
+package assignments;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+
+public class DragaAndDropOperation {
+
+	public static void main(String[] args) {
+		String chromeExepath=System.getProperty("user.dir")+"\\executables\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",chromeExepath);
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(" https://the-internet.herokuapp.com/drag_and_drop");
+		WebElement a=driver.findElement(By.id("column-a"));
+	
+	Actions act=new Actions(driver);
+	WebElement sourceElementA=driver.findElement(By.id("column-a"));
+	WebElement targetElementB=driver.findElement(By.id("column-b"));
+	act.dragAndDrop(sourceElementA,targetElementB).build().perform();
+	
+	
+	}
+	
+
+}

@@ -1,0 +1,52 @@
+package assignments;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class TrainValidation {
+
+	public static void main(String[] args)throws InterruptedException {
+		String driverpath=System.getProperty("user.dir")+"\\executables\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",driverpath);
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://etrain.info/in");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		Thread.sleep(3000);
+		WebElement from=driver.findElement(By.id("tbsfi1"));
+		from.click();
+		Thread.sleep(1000);
+		from.sendKeys("PUNE");
+		driver.findElement(By.cssSelector("div[id='suggest_row1']")).click();
+		WebElement to=driver.findElement(By.cssSelector("input[id='tbsfi3']"));
+		to.click();
+		Thread.sleep(1000);
+	    to.sendKeys("MUMBAI CST");
+		driver.findElement(By.cssSelector("div#suggest_row1>a>*:nth-of-type(1)")).click();
+		
+	//	Select calender option
+		driver.findElement(By.cssSelector("input[id='tbsfi4']")).click();
+		driver.findElement(By.cssSelector("tbody>tr:nth-of-type(5)>td:nth-of-type(4)")).click();
+		Thread.sleep(1000);
+		
+		Thread.sleep(1000);
+		
+		WebElement quota=driver.findElement(By.className("selectBox"));
+		Select selectQuota=new Select(quota);
+		System.out.println("Is dropDown is allowing select multiple:"+selectQuota.isMultiple());
+		List<WebElement>options=selectQuota.getOptions();
+		System.out.println("option count is:"+options.size());
+		for(int i=0;i<options.size();i++) {
+			System.out.println("All options:"+options.get(i).getText());
+			selectQuota.selectByIndex(2);
+			driver.findElement(By.className("btn")).click();
+		}
+		
+	}
+
+}

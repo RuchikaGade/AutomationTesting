@@ -1,0 +1,15 @@
+package encapsulation;
+
+public class Ex5 {
+public static void main(String[] args) {
+		Account acc =new Account();
+		acc.setAcc_no(123456789);
+		acc.setname("sonoo jaiswal");
+		acc.setEmail("absc@gmail.com");
+		acc.setamount(600000f);
+		System.out.println(acc.getacc_no());
+		System.out.println(acc.getname());
+		System.out.println(acc.getamount());
+		System.out.println(acc.getEmail());
+}
+}

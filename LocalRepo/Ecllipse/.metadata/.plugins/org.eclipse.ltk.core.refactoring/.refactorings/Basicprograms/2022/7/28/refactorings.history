@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;inheritance.abcd.java&apos; to &apos;childclass.java&apos;&#x0D;&#x0A;- Original project: &apos;Basicprograms&apos;&#x0D;&#x0A;- Original element: &apos;inheritance.abcd.java&apos;&#x0D;&#x0A;- Renamed element: &apos;inheritance.childclass.java&apos;" description="Rename compilation unit &apos;abcd.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;inheritance{abcd.java" name="childclass.java" references="false" stamp="1656830345648" version="1.0"/>
+</session>

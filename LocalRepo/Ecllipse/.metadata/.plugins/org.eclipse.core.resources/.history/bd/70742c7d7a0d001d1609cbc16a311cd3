@@ -1,0 +1,22 @@
+package collection;
+import java.util.ArrayList;
+public class Arraylist2 {
+	public static void main(String[] args) {
+		ArrayList a1=new ArrayList();
+		System.out.println("Initial list of elements:"+a1);
+		System.out.println("list of element status:"+a1.isEmpty());
+		a1.add("Ravi");
+		a1.add("vijay");
+		a1.add("ajay");
+		System.out.println("After invoking add(E e)method:"+a1);
+		a1.add(1,"Gaurav");
+		System.out.println("After adding new element:"+a1);
+		ArrayList a2=new ArrayList();
+		a2.add("Hanumant");
+		a2.add("sonu");
+		System.out.println("Displaying list of object2:"+a2);
+		a1.addAll(a2);
+		System.out.println("list of element after adding element:"+a1);
+}
+
+}

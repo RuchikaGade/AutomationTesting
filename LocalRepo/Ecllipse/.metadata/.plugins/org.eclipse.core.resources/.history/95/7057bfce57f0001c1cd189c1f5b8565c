@@ -1,0 +1,13 @@
+package program;
+
+public class Divide {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int num1=55;
+int num2=13;
+int res=num1/num2;
+	System.out.println("Quotient is:"+res);
+	}
+
+}

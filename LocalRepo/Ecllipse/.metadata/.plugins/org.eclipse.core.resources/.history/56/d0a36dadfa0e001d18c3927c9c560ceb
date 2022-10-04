@@ -1,0 +1,18 @@
+package collection;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Arraylist4 {
+public static void main(String[] args) {
+		ArrayList<String>a1=new ArrayList<String>();
+	System.out.println("Before adding nything:"+a1);
+		a1.add("Ravi");
+		a1.add("vijay");
+		a1.add("Ajay");
+		a1.add("Hanumat");
+		ArrayList<String>a2=new ArrayList<String>();
+
+	}
+
+}

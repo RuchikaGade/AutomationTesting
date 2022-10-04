@@ -1,0 +1,14 @@
+package program;
+
+public class subtraction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a = 250;
+int b = 133;
+int subtraction=a-b;
+System.out.println(subtraction);
+
+	}
+
+}

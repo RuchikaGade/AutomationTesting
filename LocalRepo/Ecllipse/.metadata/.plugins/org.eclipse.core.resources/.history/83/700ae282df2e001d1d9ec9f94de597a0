@@ -1,0 +1,14 @@
+package switchStatements;
+
+import org.openqa.selenium.WebDriver;
+
+import utilities.SeleniumUtility;
+
+public class AssignmentOrangeHrm {
+
+	public static void main(String[] args) {
+		SeleniumUtility s1=new SeleniumUtility();
+		WebDriver driver=s1.setUp("chrome", "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+	}
+
+}

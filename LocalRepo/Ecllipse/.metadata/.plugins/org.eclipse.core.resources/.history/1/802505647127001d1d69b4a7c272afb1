@@ -1,0 +1,37 @@
+package ExplicitWait;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+import org .openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org. openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+public class FluentWait {
+
+	public static void main(String[] args) {
+		String chromeExepath=System.getProperty("user.dir")+"";
+		System.setProperty("webdriver.chrome.driver", chromeExepath);
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.actitime.com");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.findElement(By.className(className)).sendkeys("admin");
+		driver.findElement(By.className(className)).sendkeys("manager");
+		//fluentWait declaration
+		Wait<WebDriver>wait=new FluentWait<WebDriver>(driver)
+				.withTimeout(Duration.ofSeconds(30))
+				.poolingEvery(Duration.ofSeconds(5))
+				.ignoring(NoSuchElementException.class);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutLink")));
+		System.out.println("HOMe pagrTitle:"+driver.getTitle());
+		
+		
+				
+		
+		
+
+	}
+
+}

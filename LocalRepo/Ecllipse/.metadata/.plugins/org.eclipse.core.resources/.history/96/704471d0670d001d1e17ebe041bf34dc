@@ -1,0 +1,17 @@
+package collection;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+public class Arraylist1 {
+public static void main(String[] args) {
+		ArrayList list=new ArrayList();
+		list.add("mango");
+		list.add("banana");
+		list.add("apple");
+		list.add(12345);
+		System.out.println("sizeof arraylist:"+list.size());
+		System.out.println("Elements in arraylist:"+list);
+
+	}
+
+}

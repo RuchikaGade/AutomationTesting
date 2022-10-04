@@ -1,0 +1,23 @@
+package collection;
+import java.util.ArrayList;
+public class Arraylist3 {
+	public static void main(String[] args) {
+		ArrayList<Integer>l1=new ArrayList<Integer>();
+		l1.add(26);
+		l1.add(28);
+		ArrayList<Boolean>l2=new ArrayList<Boolean>();
+		l2.add(true);
+		ArrayList<Character>l3=new ArrayList<Character>();
+		l3.add('r');
+		ArrayList<String>l4=new ArrayList<String>();
+		l4.add("Ravi");
+		l4.add("Vijay");
+		l4.add("Ajay");
+		l4.add("Anuj");
+		l4.add("Gaurav");
+		l4.add("Hanumat");
+System.out.println("displaying the string list:"+l4);
+System.out.println("removing vijay from collection:"+l4.remove("Vijay"));
+	}
+
+}

@@ -1,0 +1,23 @@
+package program;
+
+public class Palindrom {
+
+	public static void main(String[] args) {
+		int num1=512,rev=0;
+		int temp = num1 ;
+		for(;num1!=0;num1=num1/10) {
+			int reminder=num1 %10;
+			rev=rev*10+reminder;
+		}
+		System.out.println("The reverse of the given number is:"+rev);
+		if(temp==rev) {
+			System.out.println("Given number is parindrom:"+temp);
+		}else {
+			System.out.println("Given mumber is not a palindrom:"+temp);
+			
+			
+		}
+
+	}
+
+}

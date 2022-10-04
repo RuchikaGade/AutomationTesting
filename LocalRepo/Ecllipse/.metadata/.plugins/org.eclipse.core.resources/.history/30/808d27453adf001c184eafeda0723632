@@ -1,0 +1,28 @@
+package program;
+
+public class example2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		import java.util.scanner
+		class program1 
+		{
+			
+			
+				scanner scan=new scanner(system.in);
+				system.out.println ("Enter 5 sub marks");
+				int a= scan.nextInt();
+				int b= scan.nextInt();
+				int c= scan.nextInt();
+				int d= scan.nextInt();
+				int e= scan.nextInt();
+				if (a>=40 && b>=40 && c>=40 && d>=40 && e>=40)
+				system.out.println( " PASS");
+				else
+					system.out.println( "FAIL");
+			}
+		}
+
+	}
+
+}

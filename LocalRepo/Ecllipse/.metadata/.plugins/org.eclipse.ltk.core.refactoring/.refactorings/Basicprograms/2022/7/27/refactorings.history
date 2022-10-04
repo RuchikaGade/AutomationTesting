@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;basicprogram.thisstatement222.java&apos; to &apos;Thisstatement21.java&apos;&#x0D;&#x0A;- Original project: &apos;Basicprograms&apos;&#x0D;&#x0A;- Original element: &apos;basicprogram.thisstatement222.java&apos;&#x0D;&#x0A;- Renamed element: &apos;basicprogram.Thisstatement21.java&apos;" description="Rename compilation unit &apos;thisstatement222.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;basicprogram{thisstatement222.java" name="Thisstatement21.java" references="false" stamp="1656661196614" version="1.0"/>
+</session>

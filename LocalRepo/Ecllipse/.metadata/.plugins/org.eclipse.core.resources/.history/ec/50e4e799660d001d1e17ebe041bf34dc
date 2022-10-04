@@ -1,0 +1,11 @@
+package collection;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+public class Arraylist1 {
+public static void main(String[] args) {
+		// T
+
+	}
+
+}

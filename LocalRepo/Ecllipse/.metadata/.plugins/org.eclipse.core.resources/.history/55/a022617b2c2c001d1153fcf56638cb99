@@ -1,0 +1,66 @@
+package utility;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import openqa.selenium
+
+
+public class SeleniumUtility {
+	public static WebDriver=null;
+	public static Actions action=null;
+	public WebDriverWait wait;
+	public WebDriver setUp(String browserName,String appUrl) {
+		if(browserName.equalsIgnoreCase("chrome")) {
+			//use setUp method of webDriver manager
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver",".\\executables\\chromedriver.exe" );
+			driver=new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			wait=new WebDriverWait(driver,20);
+			driver.get(appUrl);
+			action =new Actions(driver);
+			return driver;
+		}
+		public void performClick(WebElement element,String text) {
+			element.click();
+			element.sendKeys(text);
+		}
+		public String getCurrentWorkingDir()
+		{
+			String currentDir=System.getProperty("user.dir");
+			return currentDir;
+		}
+		public void	copyTextFromField(WebElement element) {
+			action.doubleClick(element).perform();
+			element.sendKeys(Keys.chord(Keys.CONTROL,"c"));
+		}
+		public void pasteTextInToField(WebElement element) {
+			element.sendKeys(Keys.chord(Keys.CONTROL,"v"));
+		}
+			public void waitTillElementClickable(WebElement element) {
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+			}
+			//public List<WebElement>getAllElements(String locatorType,String locatorValue){
+			//SwitchCase 
+			//  }
+			
+			
+		
+		
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

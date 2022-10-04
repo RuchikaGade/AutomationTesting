@@ -1,0 +1,17 @@
+package inheritance;
+
+class Parentclass {
+void Partclass(int a){
+System.out.println("This is parent class :" +a);
+}
+}
+public class Childclass {
+Childclass(){
+
+}
+Public Static void main(String []arg){
+Childclass C1=new Childclass();
+//C1.Partclass(5);
+
+}
+}

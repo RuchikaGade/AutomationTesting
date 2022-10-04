@@ -1,0 +1,33 @@
+package switchStatements;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import utilities.SeleniumUtility;
+
+public class HandlingFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SeleniumUtility s1=new SeleniumUtility();
+		WebDriver driver=s1.setUp("chrome","https:/jqueryui.com/");
+driver.findElement(By.xpath(""));
+//step1:Identify frame element
+//WebElement frameobject=driver.findElement(By.cssSelector("");
+//Step2:switch your control from main page to frame
+//driver.switchTo().frame(frameobject);
+//OR
+driver.switchTo().frame(0);
+//now u are allowed to identify any required element and perform operation on it
+WebElement src=driver.findElement(By.id(""));
+WebElement target=driver.findElement(By.id(""));
+SeleniumUtility.action.dragAndDrop(src, target).perform();
+//in order to perform any reqquired action on the main page element switch back to main page first
+driver.switchTo().defaultContent();
+//now your control is in main page
+driver.findElement(By.cssSelector("")).click();
+	}
+	}
+
+

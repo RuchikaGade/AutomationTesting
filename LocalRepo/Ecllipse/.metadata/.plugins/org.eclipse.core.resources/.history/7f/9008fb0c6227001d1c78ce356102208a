@@ -1,0 +1,27 @@
+package keyboardOperations;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome .ChromeDriver;
+import utilities.selenium.SeleniumUtility;
+
+
+public class KeyboardOps2 {
+
+	public static void main(String[] args) {
+		String chromeExepath=System.getProperty("user.dir")+"";
+		//setting the path for  driver executable
+		System.setProperty("webdriver.chroe.driver", chromeExepath);
+		//creating an instance of chrome browser and upcasting it to webDriver interface
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS );
+		//to enter required application url use get() of webDriver interface
+		driver.get("https://demo.actitime.com/");
+		//login in actitime application usinng enter key
+		driver.findElement(By.id("username")).sendkeys("admin",Keys.TAB);
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package propertyfiles;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ReadData {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

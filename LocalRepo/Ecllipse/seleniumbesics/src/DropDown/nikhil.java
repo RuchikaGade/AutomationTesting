@@ -1,0 +1,33 @@
+package DropDown;import java.util.List;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class nikhil {
+	public static void main(String[] args) {
+
+	String chromeExePath=System.getProperty("user.dir")+"\\Executables\\chromedriver.exe";
+	//setting the path for driver executable
+	System.setProperty("webdriver.chrome.driver",chromeExePath);
+	WebDriver call=new ChromeDriver();
+	call.manage().window().maximize();
+	call.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+	call.get("http://demo.automationtesting.in/Register.html");
+	//identify dropdown
+	WebElement s1= call.findElement(By.cssSelector(".select2-selection__arrow"));
+	System.out.println(s1);
+	//create select class instance and pass parameter
+	Select s3=new Select(s1);
+	System.out.println(s3.isMultiple());
+	
+	List<WebElement> s2 =s3.getOptions();
+	System.out.println(s2.size());
+	for(WebElement a: s2) {
+		System.out.println(a.getText());
+
+}}}

@@ -1,0 +1,25 @@
+package Locators;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class VtigerLogin {
+
+	public static void main(String[] args) {
+		String currentWorkingDir=System.getProperty("user.dir");
+		String chromeExePath=currentWorkingDir+"E:\\Ecllipse\\seleniumbesics\\executables\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",chromeExePath);
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://demo.vtiger.com/vtigercrm/index.php");
+		WebElement username=driver.findElement(By.id("username"));
+		username.clear();
+		username.sendKeys("admin");
+		WebElement pwd=driver.findElement(By.name("password"));
+		pwd.clear();
+		pwd.sendKeys("Test@123");
+		WebElement signInButton=driver.findElement(By.className("buttonBlue"));
+		
+	}
+
+}

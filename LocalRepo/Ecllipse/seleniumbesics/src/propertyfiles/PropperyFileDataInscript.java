@@ -1,0 +1,61 @@
+package propertyfiles;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+import java.io.IOException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PropperyFileDataInscript {
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis=new FileInputStream("");
+		Properties prop=new Properties();//create an instance of property class
+		//with the help of proerties class ref call load() and pass the fileInputStream ref as a parameter
+		prop.load(fis);
+		String driverKey=prop.getProperty("driver key");
+		String executablePath=prop.getProperty("driverExecutablePath");
+		String applicationUrl=prop.getProperty("applicationUrl");
+		String userName=prop.getProperty("userName");
+		String password=prop.getProperty("password");
+		String expectedLoginPageTitle=prop.getProperty("expectedLoginPageTitle");
+		String loginPageName=prop.getProperty("loginPageName");
+		String chromeExePath=System.getenv("user.dir")+"";
+		System.setProperty("webdriver.chrome.driver", chromeExePath);
+		WebDriver driver=new ChromeDriver();
+		driver.get(applicationUrl);
+		//to get title from the application use getTitle()of webdriver interface
+		String pageTitle=driver.getTitle();
+		System.out.println("page title is:"+pageTitle);
+		System.out.println("pageTitle length:"+pageTitle.length());
+		//validating login page
+		System.out.println("Title validation status:"+pageTitle.equals(expectedLoginPageTitle));
+		String pageUrl=driver.getCurrentUrl();
+		System.out.println("page title is:"+pageUrl);
+		//validating login page
+		System.out.println("Url validation status:"+pageUrl.contains(applicationUrl));
+		String pageSource=driver.getPageSource();
+		System.out.println("page Source is:"+pageSource);
+		System.out.println("pageSource length:"+pageSource.length());
+		WebElement userNameInputField=driver.findElement(By.id("username"));
+		userNameInputField.clear();
+		userNameInputField.sendKeys(userName);
+		WebElement passwordInputField=driver.findElement(By.name("pwd"));
+		passwordInputField.sendKeys(password);
+		WebElement loginButton=driver.findElement(By.id("loginButton"));
+		loginButton.click();
+		driver.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.SeleniumUtility;
+public class CssAttributeValidation {
+
+	public static void main(String[] args) {
+	String driverpath=System.getProperty("user.dir")+"";
+	System.setProperty("webdriver.chrome.driver",driverpath);
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	driver.get("https://demo.vtiger.com/vtigercrm/index.php");
+	WebElement signInButton=driver.findElement(By.cssSelector(cssSelector));
+	String fontSize=signInButton.getCssValue("font size");
+	String fontColor=signInButton.getCssValue("color");
+	String fontBackgroundColor=signInButton.getCssValue("background-image");
+	System.out.println("Font Size:"+fontSize);
+	System.out.println("Font Colour:"+fontColor);
+	System.out.println("fontBackgroundColor:"+fontBackgroundColor);
+	String forgetPasswordLinkColor=driver.findElement(By.cssSelector(cssSelector)).getCssValue("color");
+	System.out.println("forgotPasswordLink Color:"+forgetPasswordLinkColor);//RGBA
+	
+	}
+
+}

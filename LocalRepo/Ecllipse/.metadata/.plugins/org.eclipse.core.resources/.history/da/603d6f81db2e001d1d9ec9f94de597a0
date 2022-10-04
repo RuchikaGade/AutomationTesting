@@ -1,0 +1,19 @@
+package switchStatements;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import utilities.SeleniumUtility;
+
+public class HandlingPromptPopup {
+
+	public static void main(String[] args) {
+		SeleniumUtility s1=new SeleniumUtility();
+		WebDriver driver=s1.setUp("chrome","https://www.w3school.com/js/tryit.asp?filename=tryjs_prompt");
+		//As the required element is present inside the frame ,so need to switch our control inside the frame first
+		driver.switchTo().frame("iframeresult");
+		driver.findElement(By.xpath("")).click();
+		System.out.println("Alerttext msg is:"+driver.switchTo().alert().getText());
+	}
+
+}

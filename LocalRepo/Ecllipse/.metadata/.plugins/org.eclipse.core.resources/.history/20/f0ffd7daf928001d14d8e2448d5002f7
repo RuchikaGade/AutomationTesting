@@ -1,0 +1,38 @@
+package assignments;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class TrainValidation {
+
+	public static void main(String[] args) {
+		String driverpath=System.getProperty("user.dir")+"\\executables\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",driverpath);
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.get("https://etrain.info/in");
+		driver.findElement(By.id("tbsfi1")).click();
+		driver.findElement(By.className("ui-autocomplete ui-menu")).click();
+		driver.findElement(By.id("tbsfifi3")).click();
+		driver.findElement(By.className("calBtn selected")).click();
+		driver.findElement(By.cssSelector("label[for='tbsfi4']")).click();
+		driver.findElement(By.className("calBtn selected")).click();
+		WebElement quota=driver.findElement(By.className("selectBox"));
+		Select selectQuota=new Select(quota);
+		System.out.println("Is dropDown is allowing select multiple:"+selectQuota.isMultiple());
+		List<WebElement>options=selectQuota.getOptions();
+		System.out.println("option count is:"+options.size());
+		for(int i=0;i<options.size();i++) {
+			System.out.println("All options:"+options.get(i).getText());
+			selectQuota.selectByIndex(2);
+		}
+		
+	}
+
+}
