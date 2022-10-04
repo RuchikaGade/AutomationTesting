@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="parllel test suite" parallel="methods" thread-count="2">
+<test name="Regression 1">
+<classes>
+<class name="testngsamples.ParallelExecutionOfMethods"/>
+</classes>
+</test>
+</suite>
